@@ -20,6 +20,8 @@ include 'header.php';
             <th scope="col">Cân Nặng</th>
             <th scope="col">Ngày Lập Sổ</th>
             <th scope="col">Ngày Cập Nhật</th>
+            <th scope="col">Sửa Thông Tin</th>
+      <th scope="col">Xóa Bệnh Nhân</th>
         </tr>
     </thead>
     <tbody>
@@ -49,6 +51,8 @@ include 'header.php';
       echo '<td>'.$row['blood_type'].'</td>';
       echo '<td>'.$row['created_on'].'</td>';
       echo '<td>'.$row['modified_on'].'</td>';
+      echo   '  <td ><a  href="editbn.php?patientid='.$row['patientid'].'"><i class="fas fa-user-edit"></i></a></td>';
+         echo   '  <td><a href="deletebn.php?patientid='.$row['patientid'].'"><i class="fas fa-user-times"></i></a></td>';
       echo ' </tr>';
         }
     }
